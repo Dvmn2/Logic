@@ -3,30 +3,14 @@
   "id": "logic",
   "version": "${version}",
   "name": "Logic",
-  "description": "",
-  "authors": [],
+  "description": "Grid editor for the circuits of the LogicPlugin server plugin.",
+  "authors": ["DVMN2"],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/logic/icon.png",
   "environment": "client",
   "entrypoints": {
-    "fabric-datagen": [
-      "net.dvmn2.logic.client.LogicDataGenerator"
-    ],
-    "client": [
-      "net.dvmn2.logic.client.LogicClient"
-    ],
-    "main": [
-      "net.dvmn2.logic.Logic"
-    ]
+    "client": ["net.dvmn2.logic.client.LogicClient"]
   },
-  "mixins": [
-    "logic.mixins.json",
-    {
-      "config": "logic.client.mixins.json",
-      "environment": "client"
-    }
-  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",
